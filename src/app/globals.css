@@ -1,0 +1,165 @@
+@import url('./swiper.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .ltr {
+        direction: ltr;
+    }
+
+    .rtl {
+        direction: rtl;
+    }
+
+    .red {
+        border: 1px solid red;
+    }
+
+    .green {
+        border: 1px solid green;
+    }
+
+    .blue {
+        border: 1px solid blue;
+    }
+}
+
+@font-face {
+    font-family: sfl;
+    src: url("/fonts/SFUIDisplay-Light.ttf");
+}
+
+@font-face {
+    font-family: sft;
+    src: url("/fonts/SFUIDisplay-Thin.otf");
+}
+
+@font-face {
+    font-family: sfreg;
+    src: url("/fonts/SFUIDisplay-Regular.otf");
+}
+
+@font-face {
+    font-family: sfbold;
+    src: url("/fonts/SFUIDisplay-Bold.ttf");
+}
+
+@font-face {
+    font-family: sfblack;
+    src: url("/fonts/SFUIDisplay-Black.otf");
+}
+
+@font-face {
+    font-family: sfh;
+    src: url("/fonts/SFUIDisplay-Heavy.otf");
+}
+
+@font-face {
+    font-family: shabnam;
+    src: url("/fonts/Shabnam.ttf");
+}
+
+
+body {
+    color: white;
+    background: #181818;
+    font-family: sfreg;
+    direction: ltr;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a,
+button {
+    color: #007aff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:disabled {
+    color: #888888;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+input,
+textarea,
+select {
+    border-radius: 12px;
+    background-color: unset;
+    -webkit-appearance: none;
+}
+
+textarea {
+    resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #aaa;
+    font-size: 0.85rem;
+    font-family: sfl;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* برای Google Chrome */
+input:-webkit-autofill {
+    background-color: transparent !important;
+    /* شفاف کردن پس‌زمینه */
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    /* حذف سایه مرورگر */
+    box-shadow: 0 0 0px 1000px transparent inset !important;
+    /* حذف سایه مرورگر */
+    -webkit-text-fill-color: #fff !important;
+    /* تنظیم رنگ متن */
+    transition: background-color 5000s ease-in-out 0s;
+    /* جلوگیری از بازگشت رنگ مرورگر */
+}
+
+/* برای Mozilla Firefox */
+input:-moz-autofill {
+    background-color: transparent !important;
+    /* شفاف کردن پس‌زمینه */
+    box-shadow: 0 0 0 1000px transparent inset !important;
+    /* حذف سایه مرورگر */
+    color: #fff !important;
+    /* تنظیم رنگ متن */
+}

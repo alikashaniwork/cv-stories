@@ -1,0 +1,88 @@
+#homeRandomSwiper {
+    height: auto;
+    max-height: 90vh;
+    padding: 0 16px;
+}
+
+.homeRandomSwiperSlider {
+    background: #f5f5f7 !important;
+    border-radius: 20px;
+    height: 100%;
+    transition: transform 1.2s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+#homeRandomSwiper .swiper-button-prev {
+    display: none;
+}
+
+#homeRandomSwiper:hover .swiper-button-prev {
+    transform: scale(1) rotate(180deg) !important;
+    opacity: 1;
+}
+
+#homeRandomSwiper .swiper-button-disabled {
+    display: none;
+}
+
+#homeRandomSwiper .swiper-button-prev::after {
+    content: "";
+    font-size: 1rem !important;
+}
+
+#homeRandomSwiper .swiper-button-next {
+    display: none;
+}
+
+#homeRandomSwiper:hover .swiper-button-next {
+    transform: scale(1) !important;
+    opacity: 1;
+}
+
+#homeRandomSwiper .swiper-button-next::after {
+    content: "";
+}
+
+
+@media screen and (min-width:768px) {
+    #homeRandomSwiper {
+        padding: 0 8%;
+    }
+
+    #homeRandomSwiper .swiper-button-prev {
+        display: flex;
+        border: 1px solid #eee2;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background-color: #2229;
+        backdrop-filter: blur(2px);
+        background-image: url("/icons/arrow/left-gray.png") !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 58% auto;
+        background-position-x: calc(50% + 2px);
+        left: 20px;
+        transform: scale(.5) rotate(180deg) !important;
+        transition: .4s ease-out;
+        opacity: 0;
+    }
+
+    #homeRandomSwiper .swiper-button-next {
+        display: flex;
+        border: 1px solid #eee2;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background-color: #2229;
+        backdrop-filter: blur(2px);
+        background-image: url("/icons/arrow/left-gray.png") !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 58% auto;
+        background-position-x: calc(50% + 2px);
+        right: 20px;
+        transform: scale(.5) !important;
+        transition: .4s ease-out;
+        opacity: 0;
+    }
+}

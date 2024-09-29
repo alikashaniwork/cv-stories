@@ -1,0 +1,80 @@
+.navigation-swiper .swiper-button-prev {
+    display: none;
+}
+
+.navigation-swiper:hover .swiper-button-prev {
+    transform: scale(1) rotate(180deg) !important;
+    opacity: 1;
+}
+
+.navigation-swiper .swiper-button-disabled {
+    display: none;
+}
+
+.navigation-swiper .swiper-button-prev::after {
+    content: "";
+    font-size: 1rem !important;
+}
+
+.navigation-swiper .swiper-button-next {
+    display: none;
+}
+
+.navigation-swiper:hover .swiper-button-next {
+    transform: scale(1) !important;
+    opacity: 1;
+}
+
+.navigation-swiper .swiper-button-next::after {
+    content: "";
+}
+
+/* swiper-button-next swiper-button-lock swiper-button-disabled */
+
+.swiper-pagination-bullet {
+    background-color: #aaa !important;
+}
+
+@media screen and (min-width:768px) {
+    .navigation-swiper .swiper-pagination-bullet {
+        display: none;
+    }
+
+    .navigation-swiper .swiper-button-prev {
+        display: flex;
+        border: 1px solid #eee2;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background-color: #2229;
+        backdrop-filter: blur(2px);
+        background-image: url("/icons/arrow/left-gray.png") !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 58% auto;
+        background-position-x: calc(50% + 2px);
+        left: 20px;
+        transform: scale(.5) rotate(180deg) !important;
+        transition: .4s ease-out;
+        opacity: 0;
+    }
+
+    .navigation-swiper .swiper-button-next {
+        display: flex;
+        border: 1px solid #eee2;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background-color: #2229;
+        backdrop-filter: blur(2px);
+        background-image: url("/icons/arrow/left-gray.png") !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 58% auto;
+        background-position-x: calc(50% + 2px);
+        right: 20px;
+        transform: scale(.5) !important;
+        transition: .4s ease-out;
+        opacity: 0;
+    }
+}
