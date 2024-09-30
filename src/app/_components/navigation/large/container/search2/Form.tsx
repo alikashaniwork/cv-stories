@@ -1,28 +1,23 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useContext } from "react";
-import { NavContext } from "../../Context";
-import { Context } from "./_Context";
+import { Context } from "./Context";
 
-export default function Form() {
+const Form = () => {
+    const { keyword, setKeyword } = useContext(Context);
     const { replace } = useRouter();
     const pathname = usePathname();
-    const { keyword, setKeyword } = useContext(Context);
-    const { searchOpen: open } = useContext(NavContext);
     return (
-        <form
-            className={`relative flex items-center transition-all duration-500 mt-4
-            ${open ? "w-1/3" : "w-0 overflow-hidden"}
-            `}
-        >
-            <label hidden htmlFor="search">
-                Search Stories & Authors
+        <form className="relative w-[400px] mx-auto flex items-center mt-4">
+            <label hidden htmlFor="keyword">
+                Title, Author, Genre, ...
             </label>
+
             <input
+                className="py-[14px] px-6 pr-12 w-full bg-[unset] placeholder:text-[1rem] placeholder:text-[#666666] backdrop-blur-lg border-none"
+                id="keyword"
                 type="text"
-                id="search"
-                className="h-12 w-full px-6 pr-12 bg-neutral-600/50 backdrop-blur-xl shadow-sm shadow-[#0005] rounded-2xl"
                 name="keyword"
-                placeholder="Search ..."
+                placeholder="Search Stories ..."
                 value={keyword}
                 onChange={(e) => {
                     if (e.target.value === "") {
@@ -33,7 +28,7 @@ export default function Form() {
             />
             {keyword && (
                 <button
-                    className="absolute right-4 bg-neutral-600/50 p-[2px] rounded-full"
+                    className="absolute right-4 bg-[#444] p-[2px] rounded-full"
                     onClick={() => {
                         setKeyword("");
                         replace(`${pathname}`);
@@ -53,4 +48,6 @@ export default function Form() {
             )}
         </form>
     );
-}
+};
+
+export default Form;

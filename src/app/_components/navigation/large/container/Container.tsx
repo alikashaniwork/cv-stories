@@ -33,7 +33,7 @@ const Container = ({ session }: { session: Session | null }) => {
                         Ceremony
                     </Link>
                 </div>
-                <ul className="justify-center !flex-[6] gap-6 lg:gap-10">
+                <ul className="justify-center !flex-[6] gap-4">
                     <Categories />
                     <Search />
                 </ul>
