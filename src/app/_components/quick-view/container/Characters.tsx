@@ -4,7 +4,7 @@ import { Context } from "./Container";
 export default function Characters() {
     const { characters } = useContext(Context);
     return (
-        <ul className="flex flex-col items-start red">
+        <ul className="w-full">
             <p className="font-sfl text-neutral-400 tracking-wider">
                 Characters
             </p>

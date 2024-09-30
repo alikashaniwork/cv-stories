@@ -4,7 +4,7 @@ import { Context } from "./Container";
 export default function Locations() {
     const { locations } = useContext(Context);
     return (
-        <ul className="">
+        <ul className="w-full">
             <p className="font-sfl text-neutral-400 tracking-wider">
                 Locations
             </p>
