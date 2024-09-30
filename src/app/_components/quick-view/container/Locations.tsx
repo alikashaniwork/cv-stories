@@ -12,8 +12,7 @@ export default function Locations() {
                 <li key={index} className="py-1">
                     <p>{character.name}</p>
                     <p className="text-neutral-300 font-sft -mt-1">
-                        {character.about ||
-                            "asjf lwebfjlewbgflewbglewjnf wel bgwe gbfsjld cblqwdbwqldfbwq"}
+                        {character.about}
                     </p>
                 </li>
             ))}
