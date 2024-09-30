@@ -25,7 +25,7 @@ const Container = ({ session }: { session: Session | null }) => {
     const isStories = pathname.includes("story");
     return (
         !isHidden && (
-            <div className="md:hidden w-full h-[45px] fixed bottom-0 left-0 z-20 bg-[#18181888] backdrop-blur-2xl *:flex-1">
+            <div className="lg:hidden w-full h-[45px] fixed bottom-0 left-0 z-20 bg-[#18181888] backdrop-blur-2xl *:flex-1">
                 <ul className="h-full flex items-center justify-between">
                     <Tab href="/">
                         <Image

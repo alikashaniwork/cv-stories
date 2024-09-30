@@ -34,7 +34,7 @@ const Results = () => {
                         {data?.stories?.map((story) => (
                             <li key={story._id}>
                                 <Link
-                                    className="ltr  justify-start py-2 border-b border-neutral-300"
+                                    className="ltr  justify-start py-2 border-b border-neutral-700"
                                     href={`/story/${story._id}/${story.title}?query=${keyword}`}
                                 >
                                     <div className="flex items-center justify-start gap-2 ">
@@ -43,9 +43,9 @@ const Results = () => {
                                             height={45}
                                             src={story.poster}
                                             alt={story.title || ""}
-                                            className="min-w-16 max-w-16 h-20 object-contain"
+                                            className="min-w-16 max-w-16 h-20 object-cover rounded-xl"
                                         />
-                                        <p className="text-10 font-sfl text-neutral-600 text-[.9rem] tracking-wide">
+                                        <p className="text-10 font-sfl text-neutral-300 text-[.9rem] tracking-wide">
                                             {story.title}
                                         </p>
                                     </div>

@@ -4,7 +4,6 @@ import Container from "./Container";
 export default async function Banner() {
     const response = await fetch(
         "https://cv-stories.netlify.app/api/story/general/landing/banner"
-        // "http://localhost:3000/api/story/general/landing/banner"
     );
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);

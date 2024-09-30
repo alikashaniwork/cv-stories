@@ -21,7 +21,7 @@ const Container = ({ session }: { session: Session | null }) => {
     return (
         !isHidden && (
             <nav
-                className={`hidden ${position} top-0 z-40 w-full h-12 md:flex items-center justify-between transition-all duration-300 ${
+                className={`hidden ${position} top-0 z-40 w-full h-12 lg:flex items-center justify-between transition-all duration-300 ${
                     isOpen ? "" : "bg-[#0a0a0a077]"
                 } backdrop-blur-xl px-[5%] lg:px-[8%] *:h-full *:flex *:items-center *:flex-[2]`}
             >
